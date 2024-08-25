@@ -1,0 +1,24 @@
+
+body {
+  background: url('./assets/bitcoin.png') no-repeat center center fixed; /* Path to your background image */
+  background-size: cover;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.App {
+  text-align: center;
+  background-color: #282c34;
+  min-height: 100vh;
+  padding-top: 20vh;
+  color: white;
+}
+
+.coin-flip-container {
+  margin-top: 50px;
+}
+
+.coin-flip-container h1 {
+  font-size: 36px;
+}
+

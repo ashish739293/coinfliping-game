@@ -1,0 +1,244 @@
+.coin-flip-container {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 15px;
+    border: 3px solid #d4af37;
+    max-width: 300px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  
+  .coin-display {
+    margin-bottom: 5px;
+  }
+  
+  .game-title {
+    color: #d4af37;
+    font-family: 'Garamond', serif;
+    font-size: 28px;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-top: 0%;
+  }
+  
+  .bet-input-container {
+    margin-bottom: 25px;
+  }
+  
+  .bet-input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #d4af37;
+    width: 100%;
+    max-width: 250px;
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    transition: border-color 0.3s, background-color 0.3s;
+  }
+  
+  .bet-input:focus {
+    border-color: #bfa600;
+    background-color: #fff;
+  }
+  
+  .guess-section {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .guess-label {
+    display: inline-block;
+    /* position: relative; */
+    cursor: pointer;
+  }
+  
+  .guess-input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+  
+  .guess-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #d4b737;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  
+  .guess-input:checked + .guess-image {
+    width: 80px;
+    height: 80px;
+    background-color:#bfa600;
+    transform: scale(1.1);
+  }
+  
+  .flip-button {
+    padding: 14px 28px;
+    font-size: 20px;
+    background-color: #d4af37;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    font-family: 'Garamond', serif;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .flip-button:hover {
+    background-color: #bfa600;
+    transform: scale(1.05);
+  }
+  
+  .flip-button.flipping {
+    background-color: #bfa600;
+  }
+  
+  .coin-img {
+    width: 130px;
+    height: 130px;
+    transition: transform 2s ease-in-out;
+    display: inline-block;
+  }
+  
+  .coin-img.flipping {
+    animation: rotate 2s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% { transform: rotateY(0deg); }
+    100% { transform: rotateY(360deg); }
+  }
+  
+  .result-section {
+    margin: 0%;
+    padding: 0%;
+    height: 50px;
+    animation: fadeInUp 0.5s ease-out;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .result-message {
+    font-size: 26px;
+    font-weight: bold;
+    font-family: 'Garamond', serif;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    animation: pulse 1s infinite;
+    margin: 0%;
+  }
+  
+  .result-message.win {
+    color: #28a745;
+  }
+  
+  .result-message.lose {
+    color: #dc3545;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Media Queries for Responsiveness */
+  
+  @media (max-width: 768px) {
+    .coin-flip-container {
+      padding: 10px;
+      max-width: 350px;
+    }
+  
+    .game-title {
+      font-size: 24px;
+      margin-top: 0%;
+    }
+  
+    .bet-input {
+      font-size: 16px;
+      padding: 10px;
+    }
+  
+    .flip-button {
+      padding: 10px 20px;
+      font-size: 18px;
+    }
+  
+    .coin-img {
+      width: 130px;
+      height: 130px;
+    }
+  
+    .guess-image {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .result-message {
+      font-size: 22px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .coin-flip-container {
+      padding: 10px;
+      max-width: 300px;
+    }
+  
+    .game-title {
+      font-size: 20px;
+      margin-top: 0%;
+    }
+  
+    .bet-input {
+      font-size: 14px;
+      padding: 8px;
+    }
+  
+    .flip-button {
+      padding: 8px 16px;
+      font-size: 16px;
+    }
+  
+    .coin-img {
+      width: 90px;
+      height: 90px;
+    }
+  
+    .guess-image {
+      width: 70px;
+      height: 70px;
+    }
+  
+    .result-message {
+      font-size: 20px;
+      animation: none;
+    }
+    .guess-input:checked + .guess-image {
+        width: 80px;
+        height: 80px;
+        background-color:#bfa600;
+        transform: none;
+      }
+  }
+  
